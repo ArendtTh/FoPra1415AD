@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.em
+ f.ecore,org.eclipse.emf.refactor.metrics,org.eclipse.uml2.uml,org.ecl
+ ipse.emf.refactor.metrics.ocl
+Bundle-ActivationPolicy: lazy
+Bundle-Version: 1.0.0.qualifier
+Bundle-Name: Metrics
+Bundle-ManifestVersion: 2
+Bundle-Activator: de.unimarburg.swt.fopra.activity.metrics.Activator
+Bundle-SymbolicName: de.unimarburg.swt.fopra.activity.metrics;singleto
+ n:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+
