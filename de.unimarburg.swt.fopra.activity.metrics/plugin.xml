@@ -3,5 +3,13 @@
 <extension point="org.eclipse.emf.refactor.metrics">
 <metric id="de.pum.swt.ad.nfna1" metric_calculate_class="org.eclipse.emf.refactor.metrics.NFNA1" metric_context="Activity" metric_description="Number of Fork Nodes within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NFNA1"/>
 <metric id="de.pum.swt.ad.nfna2" metric_calculate_class="org.eclipse.emf.refactor.metrics.NFNA2" metric_context="Activity" metric_description="Number of Fork Nodes within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NFNA2"/>
+<metric id="de.pum.swt.ad.ndna1" metric_calculate_class="org.eclipse.emf.refactor.metrics.Ndna1" metric_context="Activity" metric_description="Number of Decision Nodes within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="ndna1"/>
+<metric id="de.pum.swt.ad.ndna1" metric_calculate_class="org.eclipse.emf.refactor.metrics.NDNA1" metric_context="Activity" metric_description="Number of Decision Nodes within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NDNA1"/>
+<metric id="de.pum.swt.ad.njna1" metric_calculate_class="org.eclipse.emf.refactor.metrics.NJNA1" metric_context="Activity" metric_description="Number of Join Nodes within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NJNA1"/>
+<metric id="de.pum.swt.ad.nina1" metric_calculate_class="org.eclipse.emf.refactor.metrics.NINA1" metric_context="Activity" metric_description="Number of Initial Nodes within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NINA1"/>
+<metric id="de.pum.swt.ad.nfina1" metric_calculate_class="org.eclipse.emf.refactor.metrics.NFiNA1" metric_context="Activity" metric_description="Number of Final Nodes within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NFiNA1"/>
+<metric id="de.pum.swt.ad.nna1" metric_calculate_class="org.eclipse.emf.refactor.metrics.NNA1" metric_context="Activity" metric_description="Number of Nodes within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NNA1"/>
+<metric id="de.pum.swt.ad.nea1" metric_calculate_class="org.eclipse.emf.refactor.metrics.NEA1" metric_context="Activity" metric_description="Number of Edges within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NEA1"/>
+<metric id="de.pum.swt.ad.noana1" metric_calculate_class="org.eclipse.emf.refactor.metrics.NOANA1" metric_context="Activity" metric_description="Number of Opaqe Action Nodes within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NOANA1"/>
 </extension>
 </plugin>

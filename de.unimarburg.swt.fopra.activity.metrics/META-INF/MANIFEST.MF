@@ -5,8 +5,8 @@ Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.em
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0.qualifier
 Bundle-Name: Metrics
-Bundle-ManifestVersion: 2
 Bundle-Activator: de.unimarburg.swt.fopra.activity.metrics.Activator
+Bundle-ManifestVersion: 2
 Bundle-SymbolicName: de.unimarburg.swt.fopra.activity.metrics;singleto
  n:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
