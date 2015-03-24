@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.refactor.smells,
+ org.eclipse.uml2.uml;bundle-version="5.0.2"
+Bundle-ActivationPolicy: lazy
+Bundle-Version: 1.0.0.qualifier
+Bundle-Name: Smells
+Bundle-Activator: de.unimarburg.swt.fopra.activity.smells.Activator
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: de.unimarburg.swt.fopra.activity.smells;singleton
+ :=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+
