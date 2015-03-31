@@ -11,5 +11,6 @@
 <metric id="de.pum.swt.ad.nna1" metric_calculate_class="org.eclipse.emf.refactor.metrics.NNA1" metric_context="Activity" metric_description="Number of Nodes within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NNA1"/>
 <metric id="de.pum.swt.ad.nea1" metric_calculate_class="org.eclipse.emf.refactor.metrics.NEA1" metric_context="Activity" metric_description="Number of Edges within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NEA1"/>
 <metric id="de.pum.swt.ad.noana1" metric_calculate_class="org.eclipse.emf.refactor.metrics.NOANA1" metric_context="Activity" metric_description="Number of Opaqe Action Nodes within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NOANA1"/>
+<metric id="pum.swt.ad.nmna1" metric_calculate_class="org.eclipse.emf.refactor.metrics.NMNA1" metric_context="Activity" metric_description="Number of Merge Nodes within an Activity" metric_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" metric_name="NMNA1"/>
 </extension>
 </plugin>

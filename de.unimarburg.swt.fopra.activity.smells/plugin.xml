@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <plugin>
 <extension point="org.eclipse.emf.refactor.smells">
-<modelsmell id="de.pum.swt.ad.mad" modelsmell_description="bla" modelsmell_finderclass="org.eclipse.emf.refactor.modelsmell.MergeTransitionDecision" modelsmell_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" modelsmell_name="MergeTransitionDecision"/>
+<modelsmell id="de.pum.swt.ad.mad" modelsmell_description="The Model contains a connection between a Merge- and a DecisionNode" modelsmell_finderclass="org.eclipse.emf.refactor.modelsmell.MergeTransitionDecision" modelsmell_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" modelsmell_name="MergeTransitionDecision"/>
+<modelsmell id="de.pum.swt.ad.atd" modelsmell_description="The Model contains a connection between an OpaqueActivity- and a DecisionNode" modelsmell_finderclass="org.eclipse.emf.refactor.modelsmell.ATD" modelsmell_metamodel="http://www.eclipse.org/uml2/5.0.0/UML" modelsmell_name="ATD"/>
 </extension>
 </plugin>
