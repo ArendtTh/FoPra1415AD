@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<smellConfiguration>
+<modelsmell>
+<modelsmellId>de.pum.swt.ad.atd</modelsmellId>
+</modelsmell>
+<modelsmell>
+<modelsmellId>de.pum.swt.ad.mad</modelsmellId>
+</modelsmell>
+</smellConfiguration>
