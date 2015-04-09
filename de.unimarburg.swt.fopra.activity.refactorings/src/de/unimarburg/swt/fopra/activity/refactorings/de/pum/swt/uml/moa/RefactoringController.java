@@ -16,6 +16,14 @@ import org.eclipse.emf.refactor.refactoring.interfaces.IDataManagement;
 import org.eclipse.emf.refactor.refactoring.runtime.ltk.LtkEmfRefactoringProcessorAdapter;
 import org.eclipse.ltk.core.refactoring.RefactoringStatus;
 import org.eclipse.ltk.core.refactoring.participants.RefactoringProcessor;
+import org.eclipse.uml2.uml.Activity;
+import org.eclipse.uml2.uml.ActivityEdge;
+import org.eclipse.uml2.uml.ActivityNode;
+import org.eclipse.uml2.uml.Generalization;
+import org.eclipse.uml2.uml.OpaqueAction;
+import org.eclipse.uml2.uml.UMLFactory;
+import org.eclipse.uml2.uml.UMLPackage;
+import org.eclipse.uml2.uml.internal.impl.OpaqueActionImpl;
 
 public final class RefactoringController implements IController{
 
@@ -123,7 +131,18 @@ public final class RefactoringController implements IController{
 							getInPortByName(dataManagement.SELECTEDEOBJECT).getValue();
 				String newname =
 					(String) dataManagement.getInPortByName("newname").getValue();
-				// TODO: implement model transformation
+				// TODO: implement model transformation				
+				ActivityNode mergedNodeGet = selectedEObject.getSource();
+				mergedNodeGet.setName(newname);	
+				ActivityNode removedNodeGive = selectedEObject.getTarget();				
+				for(ActivityEdge actualActivityEdge : removedNodeGive.getIncomings()) {
+					System.out.println(actualActivityEdge.getLabel());
+					if(actualActivityEdge != selectedEObject)
+					actualActivityEdge.setTarget(mergedNodeGet); 
+				}
+				for(ActivityEdge actualActivityEdge : removedNodeGive.getOutgoings())
+					actualActivityEdge.setSource(mergedNodeGet);
+				
 			}
 		};
 	}
@@ -157,6 +176,14 @@ public final class RefactoringController implements IController{
 					(org.eclipse.uml2.uml.ControlFlow) dataManagement.
 							getInPortByName(dataManagement.SELECTEDEOBJECT).getValue();
 				// TODO: implement initial check
+				
+				StringBuffer m = new StringBuffer();
+				if(selectedEObject.getSource() instanceof OpaqueAction &&
+					selectedEObject.getTarget() instanceof OpaqueAction) {
+						; 
+				}
+				else result.addFatalError("Es handelt sich nicht um 2 OpaqueActions");
+				
 				return result;
 		}
 		
@@ -175,6 +202,13 @@ public final class RefactoringController implements IController{
 				String newname =
 					(String) dataManagement.getInPortByName("newname").getValue();
 				// TODO: implement final check
+				for(ActivityNode aNode : selectedEObject.getActivity().getOwnedNodes()) {
+					if(aNode instanceof OpaqueAction && aNode.getLabel().equals(newname))
+						result.addFatalError("Eine OpaqueAction mit demselben Namen exisitert bereits");
+				}
+				if (newname.equals("unspecified")) {
+					result.addFatalError("The name is empty!!!");
+				}
 				return result;
 		}
 		
