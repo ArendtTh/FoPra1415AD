@@ -21,12 +21,13 @@ public final class ATD implements IModelSmellFinder {
 	public LinkedList<LinkedList<EObject>> findSmell(EObject root) {
 		LinkedList<LinkedList<EObject>> results = new LinkedList<LinkedList<EObject>>();
 		Activity model = (Activity) root;
-		System.out.println("vor schleifen passts");
 			EList<ActivityEdge> allActivityEdges = getAllActivityEdges(model);
 			for (ActivityEdge activityEdge : allActivityEdges) {
 				if ( (activityEdge.getSource() instanceof OpaqueAction)
 						&& (activityEdge.getTarget() instanceof DecisionNode) ) {
 					LinkedList<EObject> result = new LinkedList<EObject>();
+					result.add(activityEdge.getSource());
+					result.add(activityEdge.getTarget());
 					result.add(activityEdge);
 					// TODO
 					results.add(result);

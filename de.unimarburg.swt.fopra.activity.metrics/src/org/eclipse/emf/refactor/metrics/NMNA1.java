@@ -20,13 +20,13 @@ public final class NMNA1 implements IMetricCalculator {
 	public double calculate() {	
 		org.eclipse.uml2.uml.Activity in = (org.eclipse.uml2.uml.Activity) context.get(0);
 		double ret = 0.0;
-		
+		// begin custom code
 		for(ActivityNode activity : in.getNodes()) {
 			if(activity instanceof MergeNode){
 				ret++;
 			}
 		}
-		
+		// end custom code
 		return ret;
 	}
 }
